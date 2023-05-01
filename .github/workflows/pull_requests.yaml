@@ -1,0 +1,25 @@
+name: Pull Requests
+
+on:
+  pull_request:
+    paths-ignore:
+      - "firebase/**"
+      - ".devcontainer/**"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: github.actor != 'dependabot[bot]'
+    runs-on: ubuntu-latest
+
+    steps:
+      ### Set up ###
+      - uses: actions/checkout@v3
+
+      ### Build ###
+      - name: Build
+        run: |
+          echo "Hello World!"
