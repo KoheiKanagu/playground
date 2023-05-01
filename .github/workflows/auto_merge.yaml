@@ -38,7 +38,7 @@ jobs:
           GH_TOKEN: ${{ steps.generate_token.outputs.token }}
 
       - name: Merge
-        if: contains(steps.labels.outputs.pr_labels.*.name, 'auto_merge')
+        if: contains(steps.labels.outputs.pr_labels.labels.*.name, 'merge')
         env:
           GH_TOKEN: ${{ steps.generate_token.outputs.token }}
         run: |
