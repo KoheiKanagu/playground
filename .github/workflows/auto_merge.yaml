@@ -3,7 +3,7 @@ name: Auto Merge
 on:
   workflow_run:
     workflows:
-      - pull_requests
+      - Pull Requests
     types:
       - completed
 
