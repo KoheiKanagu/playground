@@ -30,10 +30,13 @@ jobs:
           pr_labels=`gh pr view $pr_number --json labels`
           echo "pr_labels=$pr_labels" >> $$GITHUB_ENV
         id: labels
+        env:
+          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
 
       - name: Merge
         if: contains(steps.labels.outputs.pr_labels, 'auto_merge')
         env:
-          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
+          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
         run: |
+          gh pr view ${{ steps.labels.outputs.pr_number }}
           echo "gh pr merge ${{ steps.labels.outputs.pr_number }} --squash --delete-branch"
