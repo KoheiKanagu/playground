@@ -31,6 +31,8 @@ jobs:
 
           pr_labels=$(gh pr view $pr_number --json labels)
           echo "pr_labels=$pr_labels" >> $$GITHUB_ENV
+
+          echo "$pr_labels"
         id: labels
         env:
           GH_TOKEN: ${{ steps.generate_token.outputs.token }}
