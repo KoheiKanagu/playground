@@ -36,6 +36,9 @@ jobs:
         id: labels
         env:
           GH_TOKEN: ${{ steps.generate_token.outputs.token }}
+      - run: |
+          echo "${{ steps.labels.outputs.pr_number }}"
+          echo "${{ steps.labels.outputs.pr_labels }}"
 
       - name: Merge
         if: contains(steps.labels.outputs.pr_labels.labels.*.name, 'auto_merge')
