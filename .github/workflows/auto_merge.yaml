@@ -25,25 +25,20 @@ jobs:
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.APP_PRIVATE_KEY }}
 
-      - run: |
+      - name: Get PR number and labels
+        id: labels
+        env:
+          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
+        run: |
           pr_number=${{ github.event.workflow_run.pull_requests[0].number }}
           echo "pr_number=$pr_number" >> "$GITHUB_OUTPUT"
 
           pr_labels=$(gh pr view $pr_number --json labels)
           echo "pr_labels=$pr_labels" >> "$GITHUB_OUTPUT"
 
-          echo "$pr_labels"
-        id: labels
-        env:
-          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
-      - run: |
-          echo "${{ steps.labels.outputs.pr_number }}"
-          echo "${{ steps.labels.outputs.pr_labels }}"
-
-      - name: Merge
+      - name: Auto merge
         if: contains(fromJson(steps.labels.outputs.pr_labels).labels.*.name, 'auto_merge')
         env:
           GH_TOKEN: ${{ steps.generate_token.outputs.token }}
         run: |
-          gh pr view ${{ steps.labels.outputs.pr_number }}
-          echo "gh pr merge ${{ steps.labels.outputs.pr_number }} --squash --delete-branch"
+          gh pr merge ${{ steps.labels.outputs.pr_number }} --squash --delete-branch
