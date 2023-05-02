@@ -41,7 +41,7 @@ jobs:
           echo "${{ steps.labels.outputs.pr_labels }}"
 
       - name: Merge
-        if: contains(steps.labels.outputs.pr_labels.labels.*.name, 'auto_merge')
+        if: contains(fromJson(steps.labels.outputs.pr_labels).labels.*.name, 'auto_merge')
         env:
           GH_TOKEN: ${{ steps.generate_token.outputs.token }}
         run: |
