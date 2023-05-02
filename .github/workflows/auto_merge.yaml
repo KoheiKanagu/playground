@@ -27,10 +27,10 @@ jobs:
 
       - run: |
           pr_number=${{ github.event.workflow_run.pull_requests[0].number }}
-          echo "pr_number=$pr_number" >> $$GITHUB_ENV
+          echo "pr_number=$pr_number" >> "$GITHUB_OUTPUT"
 
           pr_labels=$(gh pr view $pr_number --json labels)
-          echo "pr_labels=$pr_labels" >> $$GITHUB_ENV
+          echo "pr_labels=$pr_labels" >> "$GITHUB_OUTPUT"
 
           echo "$pr_labels"
         id: labels
