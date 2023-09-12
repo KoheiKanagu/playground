@@ -1,6 +1,6 @@
-name: client_app Bug Report
-description: File a bug report for client_app
-labels: ["bug", "triage", "client_app"]
+name: Bug Report
+description: File a bug report
+labels: ["bug", "needs-triage"]
 assignees:
   - KoheiKanagu
 body:
@@ -20,29 +20,31 @@ body:
     id: version
     attributes:
       label: Version
-      description: What version of our software are you running?
+      description: What version of our app are you running?
       placeholder: latest
       value: latest
     validations:
       required: true
   - type: dropdown
-    id: os
+    id: enviroment
     attributes:
-      label: What browsers are you seeing the problem on?
+      label: What enviroment are you seeing the problem on?
       multiple: true
       options:
         - iOS
         - Android
         - macOS
-  - type: input
-    id: os-version
-    attributes:
-      label: What version of the OS are you running?
-      description: If you're not sure, you can find this in the settings.
+        - Windows
+        - Linux
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
   - type: dropdown
     id: severity
     attributes:
       label: How severe is the bug?
+      default: Critical
       options:
         - Critical
         - Major
@@ -52,5 +54,5 @@ body:
     id: datetime
     attributes:
       label: When did you encounter the bug?
-      description: Please tell us the approximate time. We will look for detailed logs in Firebase Crashlytics.
+      description: Please tell us the approximate time. We will look for detailed logs in Firebase Crashlytics and our server.
       placeholder: YYYY-MM-DD HH:MM:SS
