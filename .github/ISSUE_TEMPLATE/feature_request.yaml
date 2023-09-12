@@ -19,3 +19,5 @@ body:
     attributes:
       label: What is the use case for this feature?
       description: Describe the problem you're trying to solve.
+    validations:
+      required: true
