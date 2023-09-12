@@ -1,6 +1,5 @@
 name: client_app Bug Report
 description: File a bug report for client_app
-title: ""
 labels: ["bug", "triage", "client_app"]
 assignees:
   - KoheiKanagu
