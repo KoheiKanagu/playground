@@ -44,7 +44,7 @@ body:
     id: severity
     attributes:
       label: How severe is the bug?
-      default: Critical
+      default: 0
       options:
         - Critical
         - Major
