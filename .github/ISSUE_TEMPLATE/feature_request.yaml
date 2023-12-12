@@ -11,9 +11,7 @@ body:
         アプリをより良くするアイデアを提案していただき、ありがとうございます！以下の項目を記入してください。
   - type: textarea
     attributes:
-      label: |
-        What is the feature you'd like to see?\n
-        どのような機能を追加してほしいですか？
+      label: What is the feature you'd like to see? | どのような機能を追加してほしいですか？
       description: |
         Describe the feature you'd like to see added. Please be as detailed as possible.
         追加してほしい機能を説明してください。できるだけ詳細にお願いします。
