@@ -3,7 +3,7 @@
   "extends": ["config:base", ":semanticCommits"],
   "force": {
     "constraints": {
-      "flutter": "3.18.0-10.0.pre"
+      "flutter": "3.17.0-0"
     }
   },
   "schedule": ["before 4am on Monday"],
@@ -61,7 +61,7 @@
       "matchStrings": ["\"flutter\": \"(?<currentValue>[^\"]+).*\".*"],
       "depNameTemplate": "flutter",
       "lookupNameTemplate": "flutter/flutter",
-      "datasourceTemplate": "github-tags",
+      "datasourceTemplate": "flutter-version",
       "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+).*?$",
       "extractVersionTemplate": "^(?<version>.*)$"
     }
