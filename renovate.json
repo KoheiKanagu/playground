@@ -61,6 +61,7 @@
       "depNameTemplate": "flutter",
       "lookupNameTemplate": "flutter/flutter",
       "datasourceTemplate": "github-tags",
+      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+).*?$",
       "extractVersionTemplate": "^(?<version>.*)$"
     }
   ]
