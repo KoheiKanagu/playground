@@ -53,5 +53,15 @@
       "matchPackagePatterns": ["@swc/jest", "@types/jest", "jest"],
       "groupName": "jest"
     }
+  ],
+  "customManagers": [
+    {
+      "fileMatch": ["^renovate.json$"],
+      "matchStrings": ["\"flutter\": \"(?<currentValue>[^\"]+).*\".*"],
+      "depNameTemplate": "flutter",
+      "lookupNameTemplate": "flutter/flutter",
+      "datasourceTemplate": "github-tags",
+      "extractVersionTemplate": "^(?<version>.*)$"
+    }
   ]
 }
