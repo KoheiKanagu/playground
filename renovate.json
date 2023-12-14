@@ -11,7 +11,7 @@
   "prHourlyLimit": 0,
   "rangeStrategy": "bump",
   "semanticCommits": "enabled",
-  "enabledManagers": ["github-actions", "pub", "npm"],
+  "enabledManagers": ["github-actions", "pub", "npm", "custom.flutter"],
   "labels": ["dependencies"],
   "ignoreDeps": ["dart"],
   "packageRules": [
@@ -56,6 +56,7 @@
   ],
   "customManagers": [
     {
+      "customType": "regex",
       "fileMatch": ["^renovate.json$"],
       "matchStrings": ["\"flutter\": \"(?<currentValue>[^\"]+).*\".*"],
       "depNameTemplate": "flutter",
