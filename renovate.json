@@ -13,6 +13,7 @@
   "semanticCommits": "enabled",
   "enabledManagers": ["github-actions", "pub", "npm"],
   "labels": ["dependencies"],
+  "ignoreDeps": ["dart"],
   "packageRules": [
     {
       "matchPackagePatterns": [
