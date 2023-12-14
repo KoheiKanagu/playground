@@ -30,7 +30,7 @@
       "groupName": "go_router"
     },
     {
-      "matchPackagePatterns": ["*_info_plus"],
+      "matchPackagePatterns": ["_info_plus$"],
       "groupName": "info_plus"
     },
     {
