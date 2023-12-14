@@ -1,6 +1,46 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base"
+  "extends": ["config:base"],
+  "schedule": ["0 4 * * 1"],
+  "timezone": "Asia/Tokyo",
+  "packageRules": [
+    {
+      "matchPackagePatterns": [
+        "firebase_*",
+        "cloud_firestore",
+        "cloud_functions"
+      ],
+      "groupName": "firebase"
+    },
+    {
+      "matchPackagePatterns": [
+        "freezed_annotation",
+        "freezed",
+        "json_annotation",
+        "json_serializable"
+      ],
+      "groupName": "freezed"
+    },
+    {
+      "matchPackagePatterns": ["hooks_riverpod", "riverpod_*"],
+      "groupName": "riverpod"
+    },
+    {
+      "matchPackagePatterns": ["go_router", "go_router_builder"],
+      "groupName": "go_router"
+    },
+    {
+      "matchPackagePatterns": ["*_info_plus"],
+      "groupName": "info_plus"
+    },
+    {
+      "matchPackagePatterns": ["@typescript-eslint/*", "eslint*"],
+      "groupName": "eslint"
+    },
+
+    {
+      "matchPackagePatterns": ["@swc/jest", "@types/jest", "jest"],
+      "groupName": "jest"
+    }
   ]
 }
