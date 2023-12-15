@@ -57,6 +57,7 @@
     {
       "customType": "regex",
       "fileMatch": ["^renovate.json$", "^pubspec.yaml$"],
+      "matchStrings": ["\"flutter\": \"(?<currentValue>[^\"]+).*\".*"],
       "depNameTemplate": "flutter",
       "datasourceTemplate": "flutter-version"
     }
