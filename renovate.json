@@ -3,7 +3,7 @@
   "extends": ["config:base", ":semanticCommits"],
   "force": {
     "constraints": {
-      "flutter": "3.17.0-0"
+      "flutter": "3.17.0-0.0.pre"
     }
   },
   "schedule": ["before 4am on Monday"],
