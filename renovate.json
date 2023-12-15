@@ -61,7 +61,7 @@
       "depNameTemplate": "flutter",
       "packageNameTemplate": "flutter/flutter",
       "datasourceTemplate": "flutter-version",
-      "versioningTemplate": "flutter-version",
+      "versioningTemplate": "npm",
       "extractVersionTemplate": "^(?<version>.*)$"
     }
   ]
