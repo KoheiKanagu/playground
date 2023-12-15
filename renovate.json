@@ -3,7 +3,7 @@
   "extends": ["config:base", ":semanticCommits"],
   "force": {
     "constraints": {
-      "flutter": "3.17.0-0"
+      "flutter": "^3.17.0-0"
     }
   },
   "schedule": ["before 4am on Monday"],
@@ -47,7 +47,6 @@
       "matchPackagePatterns": ["@typescript-eslint/*", "eslint*"],
       "groupName": "eslint"
     },
-
     {
       "matchPackagePatterns": ["@swc/jest", "@types/jest", "jest"],
       "groupName": "jest"
@@ -57,7 +56,7 @@
     {
       "customType": "regex",
       "fileMatch": ["^renovate.json$", "^pubspec.yaml$"],
-      "matchStrings": ["\"flutter\": \"(?<currentValue>[^\"]+).*\".*"],
+      "matchStrings": ["\"?flutter\"?: \"?(?<currentValue>[^\"\n]+)"],
       "depNameTemplate": "flutter",
       "packageNameTemplate": "flutter/flutter",
       "datasourceTemplate": "flutter-version",
