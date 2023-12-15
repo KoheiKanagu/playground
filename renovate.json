@@ -60,7 +60,9 @@
       "matchStrings": ["\"flutter\": \"(?<currentValue>[^\"]+).*\".*"],
       "depNameTemplate": "flutter",
       "packageNameTemplate": "flutter/flutter",
-      "datasourceTemplate": "flutter-version"
+      "datasourceTemplate": "flutter-version",
+      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+).*?$",
+      "extractVersionTemplate": "^(?<version>.*)$"
     }
   ]
 }
