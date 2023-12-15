@@ -61,7 +61,7 @@
       "depNameTemplate": "flutter",
       "packageNameTemplate": "flutter/flutter",
       "datasourceTemplate": "flutter-version",
-      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+).*?$",
+      "versioningTemplate": "flutter-version",
       "extractVersionTemplate": "^(?<version>.*)$"
     }
   ]
