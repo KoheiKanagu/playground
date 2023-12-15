@@ -1,11 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base", ":semanticCommits"],
-  "force": {
-    "constraints": {
-      "flutter": "3.17.0-0.0.pre"
-    }
-  },
   "schedule": ["before 4am on Monday"],
   "timezone": "Asia/Tokyo",
   "prHourlyLimit": 0,
@@ -50,17 +45,6 @@
     {
       "matchPackagePatterns": ["@swc/jest", "@types/jest", "jest"],
       "groupName": "jest"
-    }
-  ],
-  "customManagers": [
-    {
-      "customType": "regex",
-      "fileMatch": ["^renovate.json$", "^pubspec.yaml$"],
-      "matchStrings": ["\"?flutter\"?: \"?(?<currentValue>[^\"\n]+)"],
-      "depNameTemplate": "flutter",
-      "packageNameTemplate": "flutter/flutter",
-      "datasourceTemplate": "flutter-version",
-      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+).*?$"
     }
   ]
 }
