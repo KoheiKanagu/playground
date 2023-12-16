@@ -1,4 +1,4 @@
-name: garage_workspace
+name: playground
 
 environment:
   sdk: ^3.3.0-0
