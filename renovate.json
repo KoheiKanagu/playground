@@ -6,7 +6,8 @@
   "prHourlyLimit": 0,
   "rangeStrategy": "bump",
   "semanticCommits": "enabled",
-  "enabledManagers": ["github-actions", "pub", "npm", "custom.regex", "dart"],
+  "enabledManagers": ["github-actions", "pub", "npm", "custom.regex"],
+  "ignoreDeps": ["dart"],
   "labels": ["dependencies"],
   "packageRules": [
     {
