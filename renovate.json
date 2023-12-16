@@ -1,17 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base", ":semanticCommits"],
-  "force": {
-    "constraints": {
-      "flutter": "3.18.0-0.1.pre"
-    }
-  },
   "schedule": ["before 4am on Monday"],
   "timezone": "Asia/Tokyo",
   "prHourlyLimit": 0,
   "rangeStrategy": "bump",
   "semanticCommits": "enabled",
-  "enabledManagers": ["github-actions", "pub", "npm", "custom.regex"],
+  "enabledManagers": ["github-actions", "pub", "npm", "custom.regex", "dart"],
   "labels": ["dependencies"],
   "packageRules": [
     {
