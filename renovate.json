@@ -11,6 +11,16 @@
   "labels": ["dependencies"],
   "packageRules": [
     {
+      "matchDatasources": "flutter-version",
+      "matchPackageNames": ["flutter"],
+      "versioning": "npm"
+    },
+    {
+      "matchDatasources": "dart-version",
+      "matchPackageNames": ["dart"],
+      "versioning": "npm"
+    },
+    {
       "matchPackagePatterns": [
         "firebase_*",
         "cloud_firestore",
