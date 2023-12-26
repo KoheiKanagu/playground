@@ -29,6 +29,7 @@ jobs:
           echo "Hello World!"
 
       - run: ls -lah
+      - run: fvm use --force
       - run: ls .fvm
 
       - run: which flutter
