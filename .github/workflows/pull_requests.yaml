@@ -29,6 +29,7 @@ jobs:
           echo "Hello World!"
 
       - run: ls -lah
+      - run: mkdir -p .vscode
       - run: fvm use --force
       - run: ls .fvm
 
