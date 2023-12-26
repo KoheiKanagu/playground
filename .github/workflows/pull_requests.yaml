@@ -28,6 +28,9 @@ jobs:
         run: |
           echo "Hello World!"
 
+      - run: ls -lah
+      - run: ls .fvm
+
       - run: which flutter
       - run: which dart
       - run: melos exec -- which flutter
