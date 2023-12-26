@@ -20,7 +20,16 @@ jobs:
       ### Set up ###
       - uses: actions/checkout@v4
 
+      - name: Setup Flutter
+        uses: KoheiKanagu/composite-actions/setup-flutter@main
+
       ### Build ###
       - name: Build
         run: |
           echo "Hello World!"
+
+      - run: which flutter
+      - run: which dart
+      - run: melos exec -- which flutter
+      - run: melos exec -- which dart
+      - run: melos exec -- flutter doctor

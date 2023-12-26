@@ -6,11 +6,10 @@ packages:
 repository: https://github.com/KoheiKanagu/playground
 
 command:
-  version:
-    branch: main
-    linkToCommits: true
   bootstrap:
     runPubGetInParallel: false
     hooks:
       post: |
         melos run pub:get
+
+sdkPath: .fvm/versions/beta
