@@ -7,22 +7,25 @@
   "rangeStrategy": "bump",
   "semanticCommits": "enabled",
   "enabledManagers": ["github-actions", "pub", "npm"],
-  "ignoreDeps": ["dart"],
+  "ignoreDeps": ["dart", "flutter"],
   "labels": ["dependencies"],
-  "force": {
-    "constraints": {
-      "dart": "3.3.0-174.3.beta",
-      "flutter": "3.18.0-0.2.pre"
-    }
-  },
   "packageRules": [
+    {
+      "matchFileNames": ["firebase/functions/package.json"],
+      "addLabels": ["javascript"]
+    },
+    {
+      "matchFileNames": ["packages/*/pubspec.yaml"],
+      "addLabels": ["dart"]
+    },
     {
       "matchPackagePatterns": [
         "firebase_*",
         "cloud_firestore",
         "cloud_functions"
       ],
-      "groupName": "firebase"
+      "matchFileNames": ["packages/*/pubspec.yaml"],
+      "groupName": "firebase-dart"
     },
     {
       "matchPackagePatterns": [
@@ -31,27 +34,43 @@
         "json_annotation",
         "json_serializable"
       ],
+      "matchFileNames": ["packages/*/pubspec.yaml"],
       "groupName": "freezed"
     },
     {
       "matchPackagePatterns": ["hooks_riverpod", "riverpod_*"],
+      "matchFileNames": ["packages/*/pubspec.yaml"],
       "groupName": "riverpod"
     },
     {
       "matchPackagePatterns": ["go_router", "go_router_builder"],
+      "matchFileNames": ["packages/*/pubspec.yaml"],
       "groupName": "go_router"
     },
     {
       "matchPackagePatterns": ["_info_plus$"],
+      "matchFileNames": ["packages/*/pubspec.yaml"],
       "groupName": "info_plus"
     },
     {
+      "matchPackagePatterns": ["slang", "slang_*"],
+      "matchFileNames": ["packages/*/pubspec.yaml"],
+      "groupName": "slang"
+    },
+    {
       "matchPackagePatterns": ["@typescript-eslint/*", "eslint*"],
+      "matchFileNames": ["firebase/functions/package.json"],
       "groupName": "eslint"
     },
     {
       "matchPackagePatterns": ["@swc/jest", "@types/jest", "jest"],
+      "matchFileNames": ["firebase/functions/package.json"],
       "groupName": "jest"
+    },
+    {
+      "matchPackagePatterns": ["@firebase/*", "firebase-*"],
+      "matchFileNames": ["firebase/functions/package.json"],
+      "groupName": "firebase-js"
     }
   ]
 }
