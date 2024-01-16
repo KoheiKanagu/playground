@@ -293,26 +293,26 @@ packages:
     dependency: "direct dev"
     description:
       name: custom_lint
-      sha256: "198ec6b8e084d22f508a76556c9afcfb71706ad3f42b083fe0ee923351a96d90"
+      sha256: dfb893ff17c83cf08676c6b64df11d3e53d80590978d7c1fb242afff3ba6dedb
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.7"
+    version: "0.5.8"
   custom_lint_builder:
     dependency: transitive
     description:
       name: custom_lint_builder
-      sha256: dfcfa987d2bd9d0ba751ef4bdef0f6c1aa0062f2a67fe716fd5f3f8b709d6418
+      sha256: "8df6634b38a36a6c6cb74a9c0eb02e9ba0b0ab89b29e38e6daa86e8ed2c6288d"
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.7"
+    version: "0.5.8"
   custom_lint_core:
     dependency: transitive
     description:
       name: custom_lint_core
-      sha256: f84c3fe2f27ef3b8831953e477e59d4a29c2952623f9eac450d7b40d9cdd94cc
+      sha256: "2b235be098d157e244f18ea905a15a18c16a205e30553888fac6544bbf52f03f"
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.7"
+    version: "0.5.8"
   dart_style:
     dependency: transitive
     description:
@@ -905,10 +905,10 @@ packages:
     dependency: transitive
     description:
       name: leak_tracker
-      sha256: "04be76c4a4bb50f14904e64749237e541e7c7bcf7ec0b196907322ab5d2fc739"
+      sha256: "7e108028e3d258667d079986da8c0bc32da4cb57431c2af03b1dc1038621a9dc"
       url: "https://pub.dev"
     source: hosted
-    version: "9.0.16"
+    version: "9.0.13"
   leak_tracker_testing:
     dependency: transitive
     description:
@@ -1478,10 +1478,10 @@ packages:
     dependency: transitive
     description:
       name: web
-      sha256: edc8a9573dd8c5a83a183dae1af2b6fd4131377404706ca4e5420474784906fa
+      sha256: afe077240a270dcfd2aafe77602b4113645af95d0ad31128cc02bce5ac5d5152
       url: "https://pub.dev"
     source: hosted
-    version: "0.4.0"
+    version: "0.3.0"
   web_socket_channel:
     dependency: transitive
     description:
