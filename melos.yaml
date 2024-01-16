@@ -12,4 +12,10 @@ command:
       post: |
         melos run pub:get
 
+scripts:
+  pub:get:
+    run: |
+      dart pub get
+      melos exec -- "flutter pub get"
+
 sdkPath: .fvm/versions/beta
