@@ -43,7 +43,7 @@ dependencies:
   permission_handler: ^11.2.0
   riverpod_annotation: ^2.3.3
   roggle: ^0.4.2+1
-  share_plus: ^7.2.1
+  share_plus: ^7.2.2
   shared_preferences: ^2.2.2
   uuid: ^4.3.3
 
