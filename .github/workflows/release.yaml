@@ -11,15 +11,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ toJSON(github.event) }}
+      - run: echo '${{ toJSON(github.event) }}'
+      - run: echo '${{ github.event.pull_request.title }}'
+      - run: echo '${{ github.event.pull_request.head.ref }}'
 
-  # check-pr-title:
-  #   if: github.event.pull_request.merged == true
-  #   runs-on: ubuntu-latest
-  #   permissions:
-  #     statuses: write
-  #   steps:
-  #     - uses: aslafy-z/conventional-pr-title-action@v3
-  #       if: github.actor != 'dependabot[bot]'
-  #       env:
-  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  check-pr-title:
+    if: github.event.pull_request.merged == true && startsWith(github.event.pull_request.base.ref, 'releases/')
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo '${{ github.event.pull_request.title }}'
