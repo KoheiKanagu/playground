@@ -1,8 +1,10 @@
 changelog:
-  exclude:
-    labels:
-      - dependencies
   categories:
+    - title: What's Changed
+      exclude:
+        labels:
+          - dependencies
+
     - title: Dependencies
       labels:
         - dependencies
