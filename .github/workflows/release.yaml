@@ -11,7 +11,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ github.event}}
+      - run: echo ${{ toJSON(github.event) }}
 
   # check-pr-title:
   #   if: github.event.pull_request.merged == true
